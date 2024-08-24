@@ -1,0 +1,25 @@
+const router = require("express").Router()
+const {User} = require("../../Controllers/UserController")
+const {Login} = require("../../Authentication/Auth_Login")
+const {ProtectedRoute} = require("../../Authentication/ProcetedRoute_Middleware")
+const create = require("../../Controllers/UserControllers/UserCreate")
+const read = require("../../Controllers/UserControllers/UserGet")
+const update = require("../../Controllers/UserControllers/UserUpdate")
+const updatebyemail = require("../../Controllers/UserControllers/UserUpdateUserByEmail")
+const readbyemail = require("../../Controllers/UserControllers/UserGetByEmail")
+const readbyid = require("../../Controllers/UserControllers/UserGetById")
+const Delete = require("../../Controllers/UserControllers/UserDelete")
+
+
+router.route("/").get((req, res) => {res.send("Api online")})
+router.route("/auth/signup").post((req, res) => create.create(req,res))
+router.route("/auth/login").post((req, res) => Login.login(req, res))
+router.route("/auth").post((req, res) => ProtectedRoute.AuthenticatedRoute(req, res))
+router.route("/getAllUsers").get(ProtectedRoute.AuthenticatedRoute, (req, res) => read.getAllUsers(req, res))
+router.route("/updateUser/:id").put((req, res) => update.updateUser(req, res))
+router.route("/getUserById/:id").get(ProtectedRoute.AuthenticatedRoute, (req, res) => readbyid.getUserById(req, res))
+router.route("/getUserByEmail/:email").get((req, res) => readbyemail.getUserByEmail(req, res))
+router.route("/updateUserByEmail/:email").put((req, res) => updatebyemail.updateUserByEmail(req, res))
+router.route("/deleteUser/:id").delete(ProtectedRoute.AuthenticatedRoute,(req, res) => Delete.deleteUser(req, res))
+
+module.exports = router

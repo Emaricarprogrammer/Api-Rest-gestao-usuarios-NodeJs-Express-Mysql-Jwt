@@ -10,11 +10,11 @@
 ## Rotas da API
 
 ### Rota Principal
-- **GET** `/` - Verifica se a API está online.
+- **GET** `/api/` - Verifica se a API está online.
 
 ### Autenticação
 
-- **POST** `/auth/signup` - Registra um novo usuário.
+- **POST** `/api/auth/signup` - Registra um novo usuário.
     ```json
     {
         "UserNameBody": "Nome do Usuário",
@@ -52,7 +52,7 @@
         }
         ```
 
-- **POST** `/auth/login` - Autentica o usuário e retorna um token JWT.
+- **POST** `/api/auth/login` - Autentica o usuário e retorna um token JWT.
     ```json
     {
       "UserEmailBody": "email@exemplo.com",
@@ -83,7 +83,7 @@
 
 ### Usuários
 
-- **GET** `/getAllUsers` - Retorna todos os usuários (rota protegida).
+- **GET** `/api/getAllUsers` - Retorna todos os usuários (rota protegida).
     - **Request**:
       ```http
       Authorization: Bearer seu_token_jwt
@@ -119,7 +119,7 @@
         }
         ```
 
-- **GET** `/getUserById/:id` - Retorna um usuário por ID (rota protegida).
+- **GET** `/api/getUserById/:id` - Retorna um usuário por ID (rota protegida).
     - **Request**:
       ```http
       Authorization: Bearer seu_token_jwt
@@ -147,7 +147,7 @@
         }
         ```
 
-- **GET** `/getUserByEmail/:email` - Retorna um usuário por e-mail (rota protegida).
+- **GET** `/api/getUserByEmail/:email` - Retorna um usuário por e-mail (rota protegida).
     - **Request**:
       ```http
       Authorization: Bearer seu_token_jwt
@@ -173,7 +173,7 @@
         }
         ```
 
-- **PUT** `/updateUser/:id` - Atualiza os dados de um usuário.
+- **PUT** `/api/updateUser/:id` - Atualiza os dados de um usuário.
     - **Request**:
       ```json
       {
@@ -207,7 +207,7 @@
         }
         ```
 
-- **PUT** `/updateByEmail/:email` - Atualiza os dados de um usuário por e-mail.
+- **PUT** `/api/updateByEmail/:email` - Atualiza os dados de um usuário por e-mail.
     - **Request**:
       ```json
       {
@@ -241,7 +241,7 @@
         }
         ```
 
-- **DELETE** `/deleteUser/:id` - Deleta um usuário por ID.
+- **DELETE** `/api/deleteUser/:id` - Deleta um usuário por ID.
     - **Request**:
       ```http
       Authorization: Bearer seu_token_jwt

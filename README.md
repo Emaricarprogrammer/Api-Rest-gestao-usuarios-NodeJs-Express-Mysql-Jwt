@@ -1,4 +1,4 @@
-!([url-da-imagem.png](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.toptal.com%2Fnodejs%2Fsecure-rest-api-in-nodejs&psig=AOvVaw0B7Oh6SfOvYkYZ80UBHnJY&ust=1725463549319000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPiow-WKp4gDFQAAAAAdAAAAABAE))
+!([img](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.toptal.com%2Fnodejs%2Fsecure-rest-api-in-nodejs&psig=AOvVaw0B7Oh6SfOvYkYZ80UBHnJY&ust=1725463549319000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPiow-WKp4gDFQAAAAAdAAAAABAE))
 
 ## Estrutura de Pastas
 

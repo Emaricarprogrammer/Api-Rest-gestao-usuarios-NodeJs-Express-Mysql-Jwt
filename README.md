@@ -34,7 +34,7 @@ Esta API foi desenvolvida com Node.js, Express, MySQL e JWT para gerenciar usuá
 
 2. Autenticação
     POST /auth/signup - Registra um novo usuário.
-Request:
+-Request:
 {
     "UserNameBody": "Nome do Usuário",
   "UserProfileNameBody": "Nome de Perfil",

@@ -1,4 +1,4 @@
-![imgSchema](imgSchema.png)
+![imgSchema](./imgSchema.png)
 
 ## Estrutura de Pastas
 
